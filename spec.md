@@ -10,7 +10,6 @@ FastPack has two concepts: **type system** and **formats**.
 * FastPack specification
   * [Type system](#types)
       * [Limitation](#types-limitation)
-      * [Extension type](#types-extension-type)
   * [Formats](#formats)
       * [Overview](#formats-overview)
       * [Notation in diagrams](#formats-notation)
@@ -51,18 +50,6 @@ FastPack has two concepts: **type system** and **formats**.
 * String objects may contain invalid byte sequence and the behavior of a deserializer depends on the actual implementation when it received invalid byte sequence
     * Deserializers should provide functionality to get the original byte array so that applications can decide how to handle the object
 
-<a name="types-extension-type"/>
-### Extension type
-
-FastPack allows applications to define application-specific types using the Extended type.
-Extended type consists of an integer and a byte array where the integer represents a kind of types and the byte array represents data.
-
-Applications can assign `0` to `127` to store application-specific type information.
-
-FastPack reserves `-1` to `-128` for future extension to add predefined types which will be described in separated documents.
-
-    [0, 127]: application-specific types
-    [-1, -128]: reserved for predefined types
 
 
 <a name="formats"/>
