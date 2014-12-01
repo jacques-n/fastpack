@@ -1,11 +1,6 @@
-MessagePack
+FastPack
 ===========
 
-MessagePack is an efficient binary serialization format. It's like JSON. but fast and small.
+FastPack is an object serialization specification like JSON.  It is based heavily on the MessagePack specification.  However, it is updated so that more common SQL data types can be directly encoded.  It is also primarily little endian instead of big endian to match modern systems.  It is also modified to allow parsers can to skip over nested maps and/or arrays while reading data within having to parse that data.  
 
-This repository manages specification of MessagePack format. See [Spec](spec.md) for the specification.
-
-Implementation projects have each own repository. See [msgpack.org](http://msgpack.org/) website to find implementations and their documents.
-
-If you'd like to show your msgpack implementation to the [msgpack.org](http://msgpack.org/) website, please follow the [website document](https://github.com/msgpack/website).
 
